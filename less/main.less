@@ -1,0 +1,43 @@
+
+.title-container{
+    background-image: url('../assets/home.png');
+    background-color: black;
+    height: 80vh;
+    width: 100%;
+    color: white;
+    .flexit(column, center, center);
+    h1{
+        font-size:6rem;
+        width: 50%;
+        height: 180px;
+        text-align: center;
+        line-height: 6rem;
+    }
+    div{
+        .stybtn(@bgrcol: lightgray; @color: black ; @pad:2% 6%)
+    }
+}
+
+.artists-container{
+    border-top: .2rem groove lightgrey;
+    margin-top: 20px;
+    padding: 2% 0;
+    .flexit(row, space-evenly, flex-start); 
+    .artist{
+        margin-top: 2%;
+        .flexit(column; center);
+        width: 40%;
+        text-align: center;
+        img{
+            width:100%;
+            border-radius: 12px;
+        }
+        a{
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            padding: 2%;
+            text-decoration: none;
+            color: black;
+        }
+    }
+}

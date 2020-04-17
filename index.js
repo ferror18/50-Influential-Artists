@@ -200,19 +200,21 @@ const artists = [
       "paintings": 328
     }
 ]
-
+console.clear()
 // 🖌🖼 M V P 🖼🖌 //
 
 /* Task 1: Practice accessing data above by console.log-ing following items:
 
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
-
-
-
+console.log(artists[1].name);
+console.log(artists[3].bio);
+console.clear()
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-
-
+console.log(artists[8].name);
+artists[8].name = 'Vincent Van Gogh';
+console.log(artists[8].name);
+console.clear()
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -222,10 +224,12 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
+function getArtistByIndex(arr, id) {
+    return `The artist at index ${id} is ${arr[id].name}.`
   }
   
+console.log(getArtistByIndex(artists, 0));
+console.clear()
   /**
 
 
@@ -237,54 +241,87 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(arr, id) {
+    return arr.splice(id, 1)
   }
-  
+// removeArtist(artists, 0);
+// console.log(artists);
   /**
 
 
 /* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
-
-    /* Code here */
-
+function get20s(arr){
+  const bornin20s = [...arr]; // finish this
+  // yearb = parseInt(bornin20s.years.slice(0, 4))
+  for (let i=0; i < bornin20s.length; i++){
+  if(parseInt(bornin20s[i].years.slice(0, 4))> 1900 || parseInt(bornin20s[i].years.slice(0, 4)) < 1800){
+  bornin20s.splice(i,1)
+  i = 0
   }
-
+}
+  // // console.log(arr)
+  // let bornin20s = [...arr];
+  // let yearb = undefined;
+  // let currentyb = undefined;
+  // var i = 0;
+  // function remove(x) {
+  //   index = bornin20s.indexOf(x);
+  //   console.log(index);
+  //   yearb = parseInt(x.years.slice(0, 4))
+  //   console.log(yearb);
+  //   if(yearb > 1900 || yearb < 1800){
+  //     bornin20s.splice(index, 1)
+  //   }
+  // }
+  // bornin20s.forEach(element => remove(element));
+  // // console.log(bornin20s)
+  return bornin20s;
+}
+// console.log(get20s(artists));
 /* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
-
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
+  
+function lotsOfArt(arr){
+  const madeManyArt = [...arr]; // finish this
+  for (let i=0; i < madeManyArt.length; i++){
+    if(madeManyArt[i].paintings < 100){
+      madeManyArt.splice(i,1)
+      i = 0
+    }
   }
-
-
+  return madeManyArt;
+}
+  console.log(lotsOfArt(artists));
 /* Task 7: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
+*/
+const me = {
+id: 21,
+name: 'Your Name Here', 
+years: 'Your Birth Year - current day',
+genre: 'Web Design', 
+nationality: 'Your Nationality Here',
+bio: 'Add 1-2 sentences (or use lorem ipsum)'
+}
+function addArtist(arr){
 
-id: 21
-name: Your Name Here, 
-years: Your Birth Year - current day,
-genre: Web Design, 
-nationality: Your Nationality Here
-bio: Add 1-2 sentences (or use lorem ipsum) "*/
-
-function addArtist(/* Code here */){
-
-    /* Code here */
+    artists.push(arr)
+    return console.log(artists)
 
   }
-
+// addArtist(me);
 
 /* Task 8: Create a function called `checkArtist` that accepts a string (name of an artist) and checks if that artist is in the dataset. */
 
-function checkArtist(/* Code here */){
-
-    /* Code here */
-
+function checkArtist(name){
+  let bool = false
+  for(let i = 0; i < artists.length; i++){
+    if(artists[i].name === name){
+      bool = true
+    }
   }
-
+  return bool
+  }
+// console.log(checkArtist("Amedeo Modigliani"))
 
 
 
