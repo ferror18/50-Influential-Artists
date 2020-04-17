@@ -1,4 +1,200 @@
-/* Font in design files is Raleway */
-
-/* background-image in Design 👇
- url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg/1920px-John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg'); */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html body {
+  width: 80%;
+  line-height: 1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  height: 200px;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  border: 0.2rem solid white;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 1% 2%;
+  font-size: 2.5rem;
+  text-align: center;
+  width: 60%;
+}
+header nav:hover {
+  background-color: black;
+  color: white;
+  border: 0.2rem solid black;
+}
+header #about_btn {
+  border-left: 0.02rem solid black;
+  border-right: 0.02rem solid black;
+  margin: 0 5%;
+  padding: 4% 3%;
+  width: 20%;
+}
+.title-container {
+  background-image: url('../assets/home.png');
+  background-color: black;
+  height: 80vh;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+.title-container h1 {
+  font-size: 6rem;
+  width: 50%;
+  height: 180px;
+  text-align: center;
+  line-height: 6rem;
+}
+.title-container div {
+  border: 0.2rem solid lightgray;
+  border-radius: 12px;
+  background-color: lightgray;
+  color: black;
+  text-decoration: none;
+  padding: 2% 6%;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.title-container div:hover {
+  background-color: black;
+  color: lightgray;
+  border: 0.2rem solid black;
+}
+.artists-container {
+  border-top: 0.2rem groove lightgrey;
+  margin-top: 20px;
+  padding: 2% 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.artists-container .artist {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 40%;
+  text-align: center;
+}
+.artists-container .artist img {
+  width: 100%;
+  border-radius: 12px;
+}
+.artists-container .artist a {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding: 2%;
+  text-decoration: none;
+  color: black;
+}
